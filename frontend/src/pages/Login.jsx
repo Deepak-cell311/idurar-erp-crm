@@ -12,6 +12,7 @@ import { selectAuth } from '@/redux/auth/selectors';
 import LoginForm from '@/forms/LoginForm';
 import Loading from '@/components/Loading';
 import AuthModule from '@/modules/AuthModule';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
   const translate = useLanguage();
@@ -52,6 +53,7 @@ const LoginPage = () => {
               {translate('Log in')}
             </Button>
           </Form.Item>
+        <span>Don't have an Account? <Link to={"/register"}>Regiter now</Link> </span>
         </Form>
       </Loading>
     );
